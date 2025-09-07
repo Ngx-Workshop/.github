@@ -9,12 +9,13 @@ It provides developers with a consistent, scalable way to build micro-frontends 
 
 Let's create some tech debt together!
 
-### Philosophy
-The Ngx-Workshop organization is not just about building apps.
-It’s about:
-- Teaching through doing.
-- Creating a real-world architecture that developers can learn from.
-- Focusing on practical skills over theoretical knowledge.
+> [!IMPORTANT]
+> ### Philosophy
+> The Ngx-Workshop organization is not just about building apps.
+> It’s about:
+> - Teaching through doing.
+> - Creating a real-world architecture that developers can learn from.
+> - Focusing on practical skills over theoretical knowledge.
 
 
 ## Overview
