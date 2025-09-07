@@ -4,21 +4,18 @@ Welcome to Ngx-Workshop.io organization 👋
 
 This organization is dedicated to building a modular, scalable, and educational platform for full-stack web development. Our goal is to empower developers with a hands-on ecosystem that combines Angular micro-frontends, NestJS microservices, MongoDB, and Nginx into a cohesive architecture.
 
+Ngx-Workshop is a **modern, modular, and gamified development ecosystem**.
+It provides developers with a consistent, scalable way to build micro-frontends and microservices while contributing to an ambitious platform for learning web development.
+
+Let's create some tech debt together!
+
 ### Philosophy
 The Ngx-Workshop organization is not just about building apps.
 It’s about:
 - Teaching through doing.
-- Creating modular ecosystems that scale.
-- Empowering developers to grow while contributing.
+- Creating a real-world architecture that developers can learn from.
+- Focusing on practical skills over theoretical knowledge.
 
----
-
-## Summary
-
-Ngx-Workshop is a **modern, modular, and gamified development ecosystem**.
-It provides developers with a consistent, scalable way to build micro-frontends and microservices while contributing to an ambitious platform for learning web development.
-
-Let's build something awesome together 🚀
 
 ## Overview
 
@@ -35,6 +32,7 @@ Ngx-Workshop is an ecosystem built on a **poly-repo** pattern that combines:
 
 ### Seed Repositories
 
+- **NestJs Service Seed**: https://github.com/Ngx-Workshop/seed-service-nestjs
 - **MFE Remote Seed**: https://github.com/Ngx-Workshop/seed-mfe-remote
 - **MFE Shell (Workshop) Seed**: https://github.com/Ngx-Workshop/mfe-shell-workshop
 
@@ -154,6 +152,7 @@ Thanks to the MFE architecture, the system dynamically adapts what is shown to t
 ## Getting Started
 
 - Review the **service seed repo** to learn backend patterns.
+  - **NestJs Service Seed**: https://github.com/Ngx-Workshop/seed-service-nestjs
 - Review the **MFE seed repos** to learn frontend patterns:
   - **MFE Remote Seed**: https://github.com/Ngx-Workshop/seed-mfe-remote
   - **MFE Shell (Workshop) Seed**: https://github.com/Ngx-Workshop/mfe-shell-workshop
