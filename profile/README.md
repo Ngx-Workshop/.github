@@ -4,7 +4,7 @@ Welcome to Ngx-Workshop.io organization 👋
 
 This organization is dedicated to building a modular, scalable, and educational platform for full-stack web development. Our goal is to empower developers with a hands-on ecosystem that combines Angular micro-frontends, NestJS microservices, MongoDB, and Nginx into a cohesive architecture.
 
-### 🌌 Philosophy
+### Philosophy
 The Ngx-Workshop organization is not just about building apps.
 It’s about:
 - Teaching through doing.
