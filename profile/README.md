@@ -24,20 +24,103 @@ Let's build something awesome together 🚀
 
 Ngx-Workshop is an ecosystem built on a **poly-repo** pattern that combines:
 
-- **Angular** (with Module Federation) for micro-frontends (MFEs)
-- **NestJS** microservices for backend APIs
-- **MongoDB** for data persistence
-- **Nginx** as a reverse proxy
-- **Docker & Docker Compose** for containerization
-- **GitHub Actions** for CI/CD pipelines
-- **DigitalOcean** for hosting infrastructure
-- **Grafana** for monitoring and logging
+- [**Angular**](https://angular.dev/) (with Module Federation) for micro-frontends (MFEs)
+- [**NestJS**](https://nestjs.com/) microservices for backend APIs
+- [**MongoDB**](https://www.mongodb.com/) for data persistence
+- [**Nginx**](https://nginx.org/) as a reverse proxy
+- [**Docker & Docker Compose**](https://docs.docker.com/) for containerization
+- [**GitHub Actions**](https://github.com/features/actions) for CI/CD pipelines
+- [**DigitalOcean**](https://www.digitalocean.com/) for hosting infrastructure
+- [**Grafana**](https://grafana.com/) for monitoring and logging
+
+### Seed Repositories
+
+- **MFE Remote Seed**: https://github.com/Ngx-Workshop/seed-mfe-remote
+- **MFE Shell (Workshop) Seed**: https://github.com/Ngx-Workshop/mfe-shell-workshop
+
+### Quick install (clone all repos)
+
+> Clone & install everything into a single workspace folder.
+
+```bash
+# 1) Create and enter your workspace folder
+mkdir -p ~/NGX-WORKSHOP-ORG && cd ~/NGX-WORKSHOP-ORG
+
+# 2) Download the installer script from the org profile
+curl -fsSL \
+  https://raw.githubusercontent.com/Ngx-Workshop/.github/main/profile/clone-and-install.sh \
+  -o clone-and-install.sh
+
+# (Alternatively)
+# wget -qO clone-and-install.sh \
+#   https://raw.githubusercontent.com/Ngx-Workshop/.github/main/profile/clone-and-install.sh
+
+# 3) Make it executable and run it
+chmod +x ./clone-and-install.sh
+./clone-and-install.sh
+```
 
 This ecosystem is designed to support both **structural micro-frontends** (headers, footers, navigation) and **user journey MFEs**, as well as a consistent backend service pattern with clearly defined **bounded contexts**.
 
 ---
 
 ## Architecture & Philosophy
+
+### System Diagram
+
+```mermaid
+flowchart TB
+  %% Client
+  subgraph Client["User's Browser"]
+    BROWSER["Browser"];
+  end
+
+  %% Nginx: static hosting + reverse proxy
+  subgraph Proxy["Nginx Server"]
+    NGINX["Nginx"];
+    subgraph STATIC["Static Hosting (server-less)"]
+      SHELL["Angular Shell (static /index.html, JS, CSS)"];
+      REMOTES["MFE Remotes (remoteEntry.js, chunks, assets)"];
+      ASSETS["Shared Static Assets (/assets, icons, images)"];
+    end
+  end
+
+  %% Infra: services + DB + observability
+  subgraph Infra["Docker Network / VPC"]
+    subgraph SVC["Microservices (NestJS)"]
+      AUTH["Auth Service"];
+      SVC1["Service A - CRUD Doc A"];
+      SVC2["Service B - CRUD Doc B"];
+    end
+    DB[(MongoDB)];
+    LOGS["Grafana - Monitoring"];
+  end
+
+  CI["GitHub Actions - CI/CD"];
+  DO["DigitalOcean - Hosting"];
+
+  %% Traffic flows
+  BROWSER -->|"GET /, /app/*, /remotes/*, /assets/*"| NGINX;
+  NGINX -->|"serve static"| SHELL;
+  NGINX -->|"serve static"| REMOTES;
+  NGINX -->|"serve static"| ASSETS;
+
+  NGINX -->|"/api/*"| AUTH;
+  NGINX -->|"/api/*"| SVC1;
+  NGINX -->|"/api/*"| SVC2;
+
+  AUTH -->|"CRUD Auth"| DB;
+  SVC1 -->|"CRUD A"| DB;
+  SVC2 -->|"CRUD B"| DB;
+
+  CI --> DO;
+  DO --> Proxy;
+  DO --> Infra;
+
+  LOGS -. metrics .- AUTH;
+  LOGS -. metrics .- SVC1;
+  LOGS -. metrics .- SVC2;
+```
 
 ### Microservices
 - Each NestJS microservice is responsible for **CRUD operations on a single MongoDB document type**.
@@ -71,7 +154,9 @@ Thanks to the MFE architecture, the system dynamically adapts what is shown to t
 ## Getting Started
 
 - Review the **service seed repo** to learn backend patterns.
-- Review the **MFE seed repo** to learn frontend patterns.
+- Review the **MFE seed repos** to learn frontend patterns:
+  - **MFE Remote Seed**: https://github.com/Ngx-Workshop/seed-mfe-remote
+  - **MFE Shell (Workshop) Seed**: https://github.com/Ngx-Workshop/mfe-shell-workshop
 - Explore the ecosystem repos to see real implementations.
 
 Each seed repository contains detailed onboarding docs to help you get productive quickly.
@@ -85,3 +170,4 @@ We welcome contributions from developers of all levels. The most important thing
 - Follow the **bounded context rules** for microservices.
 - Keep MFEs clearly scoped (structural vs user journey).
 - Use the provided seeds for new services or MFEs.
+- When adding new repos, consider updating the org installer script if the repo should be part of the default workspace.
