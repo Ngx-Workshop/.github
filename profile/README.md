@@ -168,5 +168,6 @@ We welcome contributions from developers of all levels. The most important thing
 
 - Follow the **bounded context rules** for microservices.
 - Keep MFEs clearly scoped (structural vs user journey).
+- Don't nest MFEs within MFEs.
 - Use the provided seeds for new services or MFEs.
 - When adding new repos, consider updating the org installer script if the repo should be part of the default workspace.
