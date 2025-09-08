@@ -2,10 +2,12 @@
 
 Welcome to Ngx-Workshop.io organization 👋
 
-This organization is dedicated to building a modular, scalable, and educational platform for full-stack web development. Our goal is to empower developers with a hands-on ecosystem that combines Angular micro-frontends, NestJS microservices, MongoDB, and Nginx into a cohesive architecture.
+This organization is dedicated to building a modular, scalable platform for **full-stack** web development. Our goal is to empower developers with a hands-on ecosystem that combines Angular micro-frontends, NestJS microservices, MongoDB, and Nginx into a cohesive architecture.
 
-Ngx-Workshop is a **modern, modular, and gamified development ecosystem**.
-It provides developers with a consistent, scalable way to build micro-frontends and microservices while contributing to an ambitious platform for learning web development.
+Ngx-Workshop is a **development ecosystem**.
+
+
+It provides developers with a consistent, scalable way to ***experiment*** with build micro-frontends and microservices while contributing to an ambitious platform for learning web development.
 
 Let's create some tech debt together!
 
@@ -138,13 +140,13 @@ flowchart TB
 
 ---
 
-## MCP Gamified Learning
+## MCP For Journeys
 
-Ngx-Workshop is more than just an architecture. The future vision is to build an **MCP (Mission Control Platform)** that gamifies learning web development.
+The future vision is to build an **MCP (Mission Control Platform)** helps with learning **Web Development**.
 Users will progress through:
 - **Assessment tests**
 - **Interactive workshops**
-- **Continuous game loops**
+- **Continuous workshop loops**
 
 Thanks to the MFE architecture, the system dynamically adapts what is shown to the user, moving beyond traditional static navigation toward a more **agent-driven, personalized journey**.
 
