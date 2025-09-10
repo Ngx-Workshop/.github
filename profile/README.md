@@ -12,7 +12,7 @@ It provides developers with a consistent, scalable way to ***experiment*** with 
 Let's create some tech debt together!
 
 > [!IMPORTANT]
-> ### Philosophy
+> **Philosophy**
 > The Ngx-Workshop organization is not just about building apps.
 > It’s about:
 > - Teaching through doing.
@@ -32,12 +32,6 @@ Ngx-Workshop is an ecosystem built on a **poly-repo** pattern that combines:
 - [**GitHub Actions**](https://github.com/features/actions) for CI/CD pipelines
 - [**DigitalOcean**](https://www.digitalocean.com/) for hosting infrastructure
 - [**Grafana**](https://grafana.com/) for monitoring and logging
-
-### Seed Repositories
-
-- **NestJs Service Seed**: https://github.com/Ngx-Workshop/seed-service-nestjs
-- **MFE Remote Seed**: https://github.com/Ngx-Workshop/seed-mfe-remote
-- **MFE Shell (Workshop) Seed**: https://github.com/Ngx-Workshop/mfe-shell-workshop
 
 ### Quick install (clone all repos)
 
@@ -65,9 +59,19 @@ This ecosystem is designed to support both **structural micro-frontends** (heade
 
 ---
 
-## Architecture & Philosophy
+## Getting Started
 
-### System Diagram
+### Seed Repositories
+
+To start creating MFEs and Services, please begin with the seed repositorie's `README` files:
+- **MFE Remote Seed**: https://github.com/Ngx-Workshop/seed-mfe-remote
+- **NestJs Service Seed**: https://github.com/Ngx-Workshop/seed-service-nestjs
+
+Each seed repository contains detailed onboarding docs to help you get productive quickly.
+
+---
+
+## Architecture
 
 ```mermaid
 flowchart TB
@@ -138,30 +142,15 @@ flowchart TB
   - **User Journey MFEs**: feature-driven applications that determine which structural MFEs to render.
 - A dedicated **MFE seed repository** provides examples and onboarding instructions for creating new MFEs.
 
----
+### MCP Server For Journeys
 
-## MCP For Journeys
-
-The future vision is to build an **MCP (Mission Control Platform)** helps with learning **Web Development**.
+The future vision is to build an **[MCP (Model Context Protocol)](https://modelcontextprotocol.io/docs/getting-started/intro)** helps with learning **Web Development**.
 Users will progress through:
 - **Assessment tests**
 - **Interactive workshops**
 - **Continuous workshop loops**
 
 Thanks to the MFE architecture, the system dynamically adapts what is shown to the user, moving beyond traditional static navigation toward a more **agent-driven, personalized journey**.
-
----
-
-## Getting Started
-
-- Review the **service seed repo** to learn backend patterns.
-  - **NestJs Service Seed**: https://github.com/Ngx-Workshop/seed-service-nestjs
-- Review the **MFE seed repos** to learn frontend patterns:
-  - **MFE Remote Seed**: https://github.com/Ngx-Workshop/seed-mfe-remote
-  - **MFE Shell (Workshop) Seed**: https://github.com/Ngx-Workshop/mfe-shell-workshop
-- Explore the ecosystem repos to see real implementations.
-
-Each seed repository contains detailed onboarding docs to help you get productive quickly.
 
 ---
 
