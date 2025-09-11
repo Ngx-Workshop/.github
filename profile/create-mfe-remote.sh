@@ -252,9 +252,9 @@ main() {
     fi
 
     # Navigate to NGX-WORKSHOP-ORG directory
-    print_status "Navigating to ~/Documents/GIT/NGX-WORKSHOP-ORG"
-    cd ~/Documents/GIT/NGX-WORKSHOP-ORG || {
-        print_error "Cannot navigate to ~/Documents/GIT/NGX-WORKSHOP-ORG. Please ensure the directory exists."
+    print_status "Navigating to ~/NGX-WORKSHOP-ORG"
+    cd ~/NGX-WORKSHOP-ORG || {
+        print_error "Cannot navigate to ~/NGX-WORKSHOP-ORG. Please ensure the directory exists."
         exit 1
     }
 
@@ -315,7 +315,7 @@ main() {
     print_status "Project: $project_name"
     print_status "Type: $mfe_type MFE"
     print_status "Repository: https://github.com/Ngx-Workshop/$project_name"
-    print_status "Local path: ~/Documents/GIT/NGX-WORKSHOP-ORG/$project_name"
+    print_status "Local path: ~/NGX-WORKSHOP-ORG/$project_name"
 }
 
 # Run the main function
